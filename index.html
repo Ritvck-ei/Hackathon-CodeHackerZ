@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Powered Learning</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>AI-Powered Adaptive Learning</h1>
+    </header>
+
+    <main id="main">
+      <section id="initial-choice-section" class="card">
+        <h2>Welcome to Your Adaptive Learning Experience!</h2>
+        <p>Choose your path:</p>
+        <div class="choice-buttons">
+          <button onclick="showLearningModule()">Start Learning Module</button>
+          <button onclick="showPracticeModule()">
+            Start Practice Questions
+          </button>
+        </div>
+      </section>
+
+      <section id="learning-module-section" style="display: none">
+        <nav class="topic-nav">
+          <h3>Select a Topic:</h3>
+          <button onclick="loadLearningTopic('photosynthesis')">
+            Photosynthesis
+          </button>
+          <button onclick="loadLearningTopic('cell_division')">
+            Cell Division
+          </button>
+          <button class="back-button" onclick="showInitialChoice()">
+            Back to Main Menu
+          </button>
+        </nav>
+
+        <div id="learning-content" class="card">
+          <h2>Select a topic to begin!</h2>
+          <div id="explanation"></div>
+          <div id="examples"></div>
+
+          <div class="feedback-controls" style="display: none">
+            <h3>Need More Clarity?</h3>
+            <button onclick="requestAdaptation('simplify')">
+              Simplify Explanation
+            </button>
+            <button onclick="requestAdaptation('more_examples')">
+              More Examples
+            </button>
+            <button onclick="requestAdaptation('still_dont_understand')">
+              Still Don't Understand
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice-module-section" style="display: none">
+        <nav class="topic-nav">
+          <h3>Select a Topic for Practice:</h3>
+          <button onclick="loadPracticeTopic('photosynthesis')">
+            Photosynthesis
+          </button>
+          <button onclick="loadPracticeTopic('cell_division')">
+            Cell Division
+          </button>
+          <button class="back-button" onclick="showInitialChoice()">
+            Back to Main Menu
+          </button>
+        </nav>
+
+        <div id="practice-questions-content" class="card" style="display: none">
+          <h2 id="practice-question-heading">
+            Practice Question:
+            <span id="practice-question-count-display"></span>
+          </h2>
+          <p id="practice-question-text"></p>
+          <textarea
+            id="practice-answer-input"
+            placeholder="Type your answer here..."
+            rows="5"
+          ></textarea>
+          <div class="question-actions">
+            <button
+              id="submit-practice-answer-btn"
+              onclick="submitPracticeAnswer()"
+            >
+              Submit Answer
+            </button>
+            <button id="next-practice-question-btn" style="display: none">
+              Next Question
+            </button>
+            <button
+              id="return-to-practice-topic-btn"
+              onclick="returnToPracticeTopicSelection()"
+              style="display: none"
+            >
+              Return to Topic Select
+            </button>
+          </div>
+          <div id="practice-evaluation-feedback"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="loading-indicator" style="display: none"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

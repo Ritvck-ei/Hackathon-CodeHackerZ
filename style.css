@@ -1,0 +1,318 @@
+/* static/style.css */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9f0f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #0056b3;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: 30px auto;
+  /* Removed fixed background-color and box-shadow from main
+       as card class now handles it for individual sections */
+}
+
+/* Card Styling for content sections */
+.card {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px; /* Space between cards */
+}
+
+/* Initial Choice Section */
+#initial-choice-section {
+  text-align: center;
+}
+
+.choice-buttons button {
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.choice-buttons button:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+/* Topic Navigation (for both modules) */
+.topic-nav {
+  background-color: #f8f9fa;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Add border-radius */
+  margin-bottom: 20px;
+}
+
+.topic-nav h3 {
+  color: #0056b3;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.topic-nav button {
+  background-color: #007bff; /* Blue */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 0 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.topic-nav button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.topic-nav .back-button {
+  background-color: #6c757d; /* Grey for back button */
+  margin-left: 20px;
+}
+.topic-nav .back-button:hover {
+  background-color: #5a6268;
+}
+
+/* General Content Styling */
+#learning-content h2,
+#practice-questions-content h2 {
+  color: #0056b3;
+  border-bottom: 3px solid #0056b3;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+
+#explanation {
+  margin-bottom: 25px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+#explanation p {
+  margin-bottom: 15px;
+}
+
+#examples {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #ccc;
+}
+
+#examples h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+#examples ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  padding-left: 0;
+}
+
+#examples li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.feedback-controls {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.feedback-controls h3 {
+  color: #4a5a6a;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.feedback-controls button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 0 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-controls button:hover {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+}
+
+/* Styling for adapted explanation content */
+.adapted-explanation {
+  background-color: #e6f7ff; /* Light blue */
+  border-left: 5px solid #007bff; /* Blue border */
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-style: italic;
+  color: #222;
+}
+
+/* Question and Answer Section Styles (for practice module) */
+#practice-questions-content {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+#practice-question-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#practice-answer-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.question-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.question-actions button:hover {
+  background-color: #0056b3;
+}
+
+#return-to-practice-topic-btn {
+  background-color: #dc3545; /* Red for 'go back' */
+}
+
+#return-to-practice-topic-btn:hover {
+  background-color: #c82333;
+}
+
+#next-practice-question-btn {
+  background-color: #ffc107; /* Orange for 'next' */
+  color: #333;
+}
+
+#next-practice-question-btn:hover {
+  background-color: #e0a800;
+}
+
+#practice-evaluation-feedback {
+  margin-top: 30px;
+  padding: 15px;
+  border: 1px solid #cce5ff;
+  background-color: #eaf6ff;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.evaluation-card {
+  border: 1px solid #b3d7ff;
+  background-color: #eaf6ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.evaluation-card h3 {
+  color: #0056b3;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.evaluation-card p {
+  margin-bottom: 8px;
+}
+
+/* Color coding for correctness and understanding */
+.correctness-correct {
+  color: #28a745;
+  font-weight: bold;
+} /* Green */
+.correctness-partially-correct {
+  color: #ffc107;
+  font-weight: bold;
+} /* Orange */
+.correctness-incorrect {
+  color: #dc3545;
+  font-weight: bold;
+} /* Red */
+
+.understanding-high {
+  color: #28a745;
+  font-weight: bold;
+}
+.understanding-medium {
+  color: #ffc107;
+  font-weight: bold;
+}
+.understanding-low {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Loading indicator */
+#loading-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 1.2em;
+  color: #0056b3;
+  border: 1px solid #b3d7ff;
+}
